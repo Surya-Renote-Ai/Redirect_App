@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Renote Ai</title>
+
+    <script>
+        window.onload = function(){
+
+            const userAgent = navigator.userAgent;
+
+            // Android
+            if (/android/i.test(userAgent)){
+                window.location.href = "https://play.google.com/store/apps/details?id=com.renote";
+            }
+
+            // IOS
+            else if (/iphone|iPod|iPad/i.test(userAgent)) {
+                window.location.href = "https://apps.apple.com/in/app/renoteai/id6479944118";
+            }
+
+            else{
+                document.body.innerHTML = "<h2> Open this link in mobile device</h2>";
+            }
+        };
+    </script>
+</head>
+<body>
+
+</body>
+</html>
