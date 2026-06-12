@@ -13,8 +13,9 @@
                 window.location.href = "https://play.google.com/store/apps/details?id=com.renote";
             }
 
-            // IOS
-            else if (/iphone|iPod|iPad/i.test(userAgent)) {
+            // IOS (iPadOS 13+ reports a Mac user agent, so also check for Mac with touch support)
+            else if (/iphone|ipod|ipad/i.test(userAgent) ||
+                     (/macintosh/i.test(userAgent) && navigator.maxTouchPoints > 1)) {
                 window.location.href = "https://apps.apple.com/in/app/renoteai/id6479944118";
             }
 
